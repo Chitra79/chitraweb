@@ -1,0 +1,149 @@
+$primary-color: #3498db;
+$secondary-color: #F1C40F;
+$background-color: #2c3e50;
+$text-color: #BDC3C7;
+$card-background: #34495e;
+
+.testimonial-container {
+  width: 100%;
+  background-color: #2C3E50;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: $text-color;
+  font-family: 'Arial', sans-serif;
+
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #F1C40F;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.testimonial-card {
+  background-color: $card-background;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  h3 {
+    margin-top: 0;
+    color: $primary-color;
+    font-size: 1.4em;
+  }
+
+  .role {
+    color: $secondary-color;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    margin: 15px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .rating {
+    color: #f1c40f;
+    font-size: 1.2em;
+  }
+}
+
+.testimonial-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: $card-background;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  .form-group {
+    margin-bottom: 25px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: $primary-color;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: $text-color;
+      font-size: 1em;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &.ng-invalid.ng-touched {
+        border-color: #e74c3c;
+      }
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    &:disabled {
+      background-color: #95a5a6;
+      cursor: not-allowed;
+    }
+  }
+
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-form {
+    padding: 30px;
+  }
+}

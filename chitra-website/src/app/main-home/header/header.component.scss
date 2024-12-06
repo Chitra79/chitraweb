@@ -1,0 +1,153 @@
+.navbar {
+  padding-top: 20px;
+  transition: 0.6s;
+  background-color: #2C3E50;
+
+  .navbar-toggler {
+
+    z-index: 1001; 
+    position: relative;
+  
+  
+  
+   
+  }
+}
+
+        .navbar-brand h2 {
+            color: #F1C40F;
+        }
+        .nav-link {
+            color: #BDC3C7;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #F1C40F;
+        }
+
+        .offcanvas {
+            background-color: #2C3E50;
+        }
+        .offcanvas-title {
+            color: #F1C40F;
+        }
+        .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+
+.container {
+  padding: 0;
+}
+
+.offcanvas {
+
+  width: 280px;
+
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.fa-xmark {
+  color: #fff;
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 5px;
+  background-color: var(--primary-color) !important;
+
+  .nav-link {
+      color: #F1C40F;
+
+   
+  }
+
+  .offcanvas {
+      .nav-link {
+          color: #fff;
+      }
+  }
+
+  
+}
+
+.nav-link {
+  transition: all 0.6s;
+  position: relative;
+  color: var(--dashboard-text-color);
+
+  &::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: var(--secondary-color);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+  }
+
+  &.active::after {
+      opacity: 1;
+  }
+
+  &:hover::after {
+      opacity: 1;
+  }
+
+ 
+}
+
+.logo-container {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: auto;
+  overflow: hidden;
+  background-image: url("/assets/logo.png");
+  background-size: cover;
+  background-position: center; 
+}
+
+
+
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+      position: relative;
+      z-index: 999;
+  }
+
+  
+
+  .offcanvas {
+      .nav-link {
+          color: #fff;
+      }
+  }
+}
+
+@media (max-width: 576px) {
+  .offcanvas {
+      width: 100%;
+      // text-align: center;
+
+      // .navbar-nav {
+      //     width: 40%;
+      // }
+  }
+
+  .container {
+      padding-right: 10px;
+  }
+}

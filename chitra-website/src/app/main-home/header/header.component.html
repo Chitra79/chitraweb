@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg" [ngClass]="{'sticky': isSticky}">
+  <div class="container">
+      <a routerLink="./" class="navbar-brand" href="javascript:void(0)"></a>
+      <a class="navbar-brand logo-container" href="#">
+          <img src="assets/chitraprdacharya.png" alt="">
+      </a>
+      <button class="navbar-toggler border-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="fas fa-bars "></i>
+
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Menus</h5>
+              <i class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+          </div>
+          <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1">
+                  <li class="nav-item mx-3">
+                      <a class="nav-link" [class.active]="activeSection === 'home'"
+                          (click)="scrollToAnchoringPosition('home')" href="javascript:void(0)">Home</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                      <a class="nav-link" [class.active]="activeSection === 'about'"
+                          (click)="scrollToAnchoringPosition('about')" href="javascript:void(0)">About</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                      <a class="nav-link" [class.active]="activeSection === 'experience'"
+                          (click)="scrollToAnchoringPosition('experience')" href="javascript:void(0)">Experience</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                      <a class="nav-link" [class.active]="activeSection === 'skills'"
+                          (click)="scrollToAnchoringPosition('skills')" href="javascript:void(0)">Skills</a>
+                  </li>
+                  <li class="nav-item ms-3">
+                      <a class="nav-link" [class.active]="activeSection === 'projects'"
+                          (click)="scrollToAnchoringPosition('projects')" href="javascript:void(0)">Projects</a>
+                  </li>
+                  
+                  <li class="nav-item ms-3">
+                    <a class="nav-link" [class.active]="activeSection === 'hire'"
+                        (click)="scrollToAnchoringPosition('hire')" href="javascript:void(0)">Hire Me</a>
+                </li>
+
+              </ul>
+
+          </div>
+      </div>
+  </div>
+</nav>

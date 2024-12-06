@@ -1,0 +1,60 @@
+<div class="testimonial-container">
+    <h1>Testimonial</h1>
+    
+    <div class="testimonials-grid">
+      <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+        <h3><i class="fas fa-user-circle"></i> {{ testimonial.name }}</h3>
+        <p class="role"><i class="fas fa-briefcase"></i> {{ testimonial.role }}</p>
+        <p class="content"><i class="fas fa-quote-left"></i> {{ testimonial.content }} <i class="fas fa-quote-right"></i></p>
+        <div class="rating">
+          <span *ngFor="let star of [1,2,3,4,5]">
+            <i class="fas" [ngClass]="{'fa-star': star <= testimonial.rating, 'fa-star-o': star > testimonial.rating}"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- <h2>Share Your Experience</h2>
+    <form [formGroup]="testimonialForm" (ngSubmit)="onSubmit()" class="testimonial-form">
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i> Name:</label>
+        <input type="text" id="name" formControlName="name" required>
+        <div *ngIf="testimonialForm.get('name')?.invalid && testimonialForm.get('name')?.touched" class="error-message">
+          <p *ngIf="testimonialForm.get('name')?.errors?.['required']">Name is required.</p>
+          <p *ngIf="testimonialForm.get('name')?.errors?.['minlength']">Name must be at least 2 characters long.</p>
+          <p *ngIf="testimonialForm.get('name')?.errors?.['maxlength']">Name cannot exceed 50 characters.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="role"><i class="fas fa-briefcase"></i> Role:</label>
+        <input type="text" id="role" formControlName="role" required>
+        <div *ngIf="testimonialForm.get('role')?.invalid && testimonialForm.get('role')?.touched" class="error-message">
+          <p *ngIf="testimonialForm.get('role')?.errors?.['required']">Role is required.</p>
+          <p *ngIf="testimonialForm.get('role')?.errors?.['minlength']">Role must be at least 2 characters long.</p>
+          <p *ngIf="testimonialForm.get('role')?.errors?.['maxlength']">Role cannot exceed 50 characters.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="content"><i class="fas fa-comment"></i> Your Testimonial:</label>
+        <textarea id="content" formControlName="content" required></textarea>
+        <div *ngIf="testimonialForm.get('content')?.invalid && testimonialForm.get('content')?.touched" class="error-message">
+          <p *ngIf="testimonialForm.get('content')?.errors?.['required']">Testimonial content is required.</p>
+          <p *ngIf="testimonialForm.get('content')?.errors?.['minlength']">Testimonial must be at least 10 characters long.</p>
+          <p *ngIf="testimonialForm.get('content')?.errors?.['maxlength']">Testimonial cannot exceed 500 characters.</p>
+          <p *ngIf="testimonialForm.get('content')?.errors?.['prohibitedWord']">Your testimonial contains inappropriate content.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="rating"><i class="fas fa-star"></i> Rating:</label>
+        <select id="rating" formControlName="rating" required>
+          <option *ngFor="let star of [1,2,3,4,5]" [value]="star">{{ star }} Stars</option>
+        </select>
+      </div>
+      <button type="submit" [disabled]="!testimonialForm.valid">
+        <i class="fas fa-paper-plane"></i> Submit Testimonial
+      </button>
+      <div *ngIf="submissionError" class="error-message">
+        <p><i class="fas fa-exclamation-circle"></i> {{ submissionError }}</p>
+      </div> -->
+    <!-- </form> -->
+  </div>

@@ -1,0 +1,204 @@
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #2C3E50;
+  }
+  
+  .skills, .language-skill {
+    width: 100%;
+  }
+  
+  .skills h2, .language-skill h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #F1C40F;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .skills p, .language-skill p {
+    font-size: 1rem;
+    color: #BDC3C7;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .skill {
+    background-color: #F1C40F;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .language-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .language-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #BDC3C7;
+    border-radius: 15px;
+    padding: 1.5rem;
+    min-width: 100px;
+  }
+  
+  .percentage {
+    background-color: #F1C40F;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .language-name {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #223343;
+  }
+  
+ /* Media Queries */
+@media (min-width: 768px) {
+    .skills-section {
+        flex-direction: row;
+    }
+
+    .skills, .language-skill {
+        flex-basis: 48%;
+    }
+
+    .skills h2, .language-skill h2 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .skills p, .language-skill p {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .skills-list {
+        justify-content: flex-start;
+    }
+
+    .skill {
+        font-size: 1.1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .language-skill {
+        margin-left: 2rem;
+    }
+
+    .language-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .language-box {
+        padding: 2rem;
+        margin-bottom: 0;
+    }
+
+    .percentage {
+        font-size: 1.75rem;
+    }
+
+    .language-name {
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+  
+  /* Tablet Styles (min-width: 600px and max-width: 1024px) */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .skills-section {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  
+    .skills, .language-skill {
+      flex-basis: 48%;
+    }
+  
+    .skills h2, .language-skill h2 {
+      font-size: 2.2rem;
+    }
+  
+    .skills-list, .language-stats {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  
+    .skill {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .language-box {
+      padding: 1.5rem;
+    }
+  
+    .percentage {
+      font-size: 1.5rem;
+    }
+  
+    .language-name {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Desktop Styles (min-width: 1025px) */
+  @media (min-width: 1025px) {
+    .skills-section {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    .skills, .language-skill {
+      flex-basis: 48%;
+    }
+  
+    .skills h2, .language-skill h2 {
+      font-size: 2.5rem;
+    }
+  
+    .skills-list, .language-stats {
+      justify-content: flex-start;
+    }
+  
+    .skill {
+      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  
+    .language-box {
+      padding: 2rem;
+    }
+  
+    .percentage {
+      font-size: 1.75rem;
+    }
+  
+    .language-name {
+      font-size: 1.4rem;
+    }
+  }

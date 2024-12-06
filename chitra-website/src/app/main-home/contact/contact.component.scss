@@ -1,0 +1,152 @@
+.contact-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2C3E50;
+  padding: 2rem;
+  max-width: 1600px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.contact-form-container {
+  padding: 3rem;
+  width: 50%;
+}
+
+.contact-form-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #667eea;
+}
+
+.contact-form .submit-btn {
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form .submit-btn svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #556cd6;
+}
+
+.contact-form .error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-links .social-link {
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.social-links .social-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.social-links .social-link:hover {
+  color: #667eea;
+}
+
+.map-container {
+  width: 50%;
+  min-height: 400px;
+}
+
+.invalid {
+  border-color: red !important;
+}
+
+@media (max-width: 1024px) {
+  .contact-form-container {
+    padding: 2rem; /* Adjust padding for tablets */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack the form and map vertically */
+  }
+
+  .contact-form-container,
+  .map-container {
+    width: 100%; /* Full width for smaller screens */
+    padding: 2rem 1rem; /* Reduce padding for mobile */
+  }
+
+  .map-container {
+    height: 300px;
+  }
+  
+  .contact-form-container h3 {
+    font-size: 1.5rem; /* Reduce heading size on mobile */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.7rem;
+    font-size: 0.875rem;
+  }
+
+  .contact-form .submit-btn {
+    padding: 0.7rem 1.2rem;
+  }
+}

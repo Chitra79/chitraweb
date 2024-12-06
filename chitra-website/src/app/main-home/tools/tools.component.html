@@ -1,0 +1,13 @@
+<div class="tools-section">
+    <h2 class="text-center text-warning ">Tools I Used Mostly</h2>
+    <hr class="text-white">
+  <mat-grid-list cols="3" rowHeight="100px" gutterSize="20px">
+   
+      <mat-grid-tile *ngFor="let tool of techStack">
+        <div class="tech-icon mt-1">
+          <img [src]="tool.icon" alt="{{ tool.name }} logo" width="50">
+          <p class="text-white">{{ tool.name }}</p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

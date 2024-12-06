@@ -1,0 +1,52 @@
+<footer class="text-center text-lg-starttext-muted">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+        <span class="text-light">Get connected with us on social networks:</span>
+      </div>
+      <div>
+        <a  *ngFor="let social of footerData.socialMediaLinks" [href]="social.url" class="me-4 text-reset icon ">
+          <i class="icon" [class]="social.iconClass"></i>
+        </a>
+      </div>
+    </section>
+  
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>{{ footerData.companyName }}
+            </h6>
+            <p>{{ footerData.description }}</p>
+          </div>
+  
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+            <p *ngFor="let product of footerData.products">
+              <a [href]="product.link" class="text-reset">{{ product.name }}</a>
+            </p>
+          </div>
+  
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+            <p *ngFor="let link of footerData.usefulLinks">
+              <a [href]="link.link" class="text-reset">{{ link.name }}</a>
+            </p>
+          </div>
+  
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> {{ footerData.contact.address }}</p>
+            <p><i class="fas fa-envelope me-3"></i> {{ footerData.contact.email }}</p>
+            <p><i class="fas fa-phone me-3"></i> {{ footerData.contact.phone }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div class="text-center p-4" style="background-color:#ffc436">
+      © 2024 Copyright:
+      <a class=" text-reset fw-bold" [href]="footerData.websiteUrl">{{ footerData.companyName }}</a>
+    </div>
+  </footer>
+  

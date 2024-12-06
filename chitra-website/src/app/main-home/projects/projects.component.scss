@@ -1,0 +1,167 @@
+.projects {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #2C3E50;
+}
+
+.projects h1 {
+    font-size: 2rem;  /* Responsive font size */
+    color: #F1C40F;
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 1rem;  /* Responsive font size */
+    color: #BDC3C7;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Project Container */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Book Design (Updated width and height) */
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;  /* Make it responsive */
+    max-width: 350px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 12px #000;
+    transform: preserve-3d;
+    perspective: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.5s ease;
+    margin-bottom: 20px;
+}
+
+/* Project Content (Inside the book) */
+.content {
+    text-align: center;
+    padding: 20px;
+}
+.link-icon{
+    cursor: pointer;
+}
+
+.book h2 {
+    font-size: 1.5rem;  /* Responsive font size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.content p {
+    font-size: 1rem;  /* Responsive font size */
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.project-link {
+    padding: 10px 25px;
+    background-color: #f4c543;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.project-link:hover {
+    background-color: #e1a531;
+}
+
+/* Cover Image (Appears on Hover) */
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 1px 1px 12px #000;
+    transition: transform 0.5s;
+    transform-origin: left;
+}
+
+/* Hover Effect to Show Image */
+.book:hover .cover {
+    transform: rotateY(-80deg);
+}
+
+/* Project Image */
+.project-img {
+    width: 100px;  /* Responsive size */
+    height: 120px; /* Responsive size */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Media Queries */
+
+/* Smaller Devices (Below 768px) */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book {
+        width: 90%;
+    }
+
+    .projects h1 {
+        font-size: 1.75rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+    }
+}
+
+/* Medium Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .book {
+        width: 45%;
+    }
+
+    .projects h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large Devices (Above 1024px) */
+@media (min-width: 1025px) {
+    .projects h1 {
+        font-size: 2.75rem;
+    }
+
+    .intro {
+        font-size: 1.25rem;
+    }
+}

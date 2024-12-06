@@ -1,0 +1,218 @@
+.hero-section {
+    background-color: #2C3E50;
+    height: 780px;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.profile {
+    max-width: 500px;
+    img {
+        width: 100%;
+        height: 580px;
+        object-fit: cover;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+}
+
+.intro-text {
+    max-width: 500px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.intro-text h4 {
+    font-size: 24px;
+    color: #F1C40F;
+    margin-bottom: 10px;
+}
+
+.intro-text h1 {
+    font-size: 64px;
+    color: #BDC3C7;
+    font-weight: 700;
+    margin: 0;
+}
+
+.intro-text .subtitle {
+    font-size: 20px;
+    color: #BDC3C7;
+    margin: 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-icons a {
+    color: #F1C40F; /* Default icon color */
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.4s, transform 0.4s;
+}
+
+
+
+.social-icons .fa-facebook-f:hover {
+    color: #3b5998; 
+  }
+  
+  .social-icons .fa-twitter:hover {
+    color: #55acee; 
+  }
+  
+  .social-icons .fa-google:hover {
+    color: #dd4b39; 
+  }
+  
+  .social-icons .fa-instagram:hover {
+    color: #e4405f; 
+  }
+  
+  .social-icons .fa-linkedin:hover {
+    color: #0077b5; 
+  }
+  
+  .social-icons .fa-github:hover {
+    color: #333; 
+  }
+
+/* Adjustments for medium screens like tablets */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: auto; /* Allow height to auto-adjust based on content */
+        padding: 30px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile img {
+        height: 400px;
+        width: 90%;
+        object-fit: cover;
+    }
+
+    .intro-text h1 {
+        font-size: 48px;
+    }
+
+    .intro-text h4 {
+        font-size: 20px;
+    }
+
+    .intro-text .subtitle {
+        font-size: 18px;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-text {
+        margin-top: 20px;
+        text-align: center; /* Align text to center on mobile */
+    }
+
+    .profile {
+        max-width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .profile img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+    }
+
+    .intro-text h1 {
+        font-size: 36px; /* Smaller font on mobile */
+    }
+
+    .intro-text h4 {
+        font-size: 18px;
+    }
+
+    .intro-text .subtitle {
+        font-size: 16px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+/* For very large screens (desktops, large monitors) */
+@media (min-width: 1200px) {
+    .hero-section {
+        height: 850px; /* Increase height for large screens */
+        padding: 60px 0;
+    }
+
+    .container {
+        justify-content: space-between;
+    }
+
+    .profile img {
+        height: 600px;
+        width: auto;
+    }
+
+    .intro-text h1 {
+        font-size: 72px; /* Increase text size */
+    }
+
+    .intro-text h4 {
+        font-size: 28px;
+    }
+
+    .intro-text .subtitle {
+        font-size: 24px;
+    }
+
+    .social-icons {
+        gap: 40px;
+    }
+
+    .social-icons a {
+        font-size: 28px;
+    }
+}

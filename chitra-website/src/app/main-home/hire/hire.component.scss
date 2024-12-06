@@ -1,0 +1,49 @@
+/* Call-to-Action Section Styling */
+.call-to-action {
+    padding: 2rem 0;
+    background-color: #2C3E50; /* Dark theme background */
+    color: #ffffff; /* White text color */
+   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.call-to-action h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5d23c; /* Bright yellow color for the heading */
+    margin: 0;
+}
+
+.go-to .px-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #f5d23c; /* Yellow button */
+    color: #223343; /* Dark text on the button */
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-to .px-btn:hover {
+    background-color: #e0bb2f; /* Slightly darker yellow on hover */
+    transform: translateY(-3px); /* Lift the button on hover */
+}
+
+.bg-theme {
+    background-color: #223343; /* Dark theme background for the section */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .call-to-action h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .go-to .px-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
