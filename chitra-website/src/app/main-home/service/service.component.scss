@@ -6,66 +6,69 @@
 }
 
 
-
 .header {
     margin-bottom: 40px;
+    text-align: center; 
 }
 
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: #F1C40F;
-}
-
-.header .sub-title {
-    font-size: 28px;
     margin-bottom: 10px;
 }
 
+.header .sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #BDC3C7;
+}
 
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     justify-items: center;
 }
+
 
 .service-item {
     background-color: #34495e;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    width: 350px;
-    height: 200px;
+    width: 100%; 
+    max-width: 350px; 
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* For z-index control */
+    position: relative; 
 }
 
 .service-item:hover {
-    background-color: #fbbf24; /* Highlight color on hover */
+    background-color: #fbbf24;
     transform: translateY(-10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Smoother, more prominent shadow */
-    z-index: 1; /* Bring the hovered item to the front */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
 }
 
 .service-item .icon {
-    font-size: 30px;
-    color: #fbbf24; /* Ensure the icon contrasts with the background */
+    font-size: 2rem;
+    color: #fbbf24; 
     margin-bottom: 20px;
     transition: color 0.3s ease;
 }
 
 .service-item:hover .icon {
-    color: #252525; /* Icon color change on hover */
+    color: #252525; 
 }
 
 .service-item h3 {
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #BDC3C7;
@@ -85,22 +88,51 @@
 }
 
 .service-item:hover h3 {
-    color: #252525; /* Text color change on hover */
+    color: #252525; 
 }
 
 .service-item:hover h3::after {
-    background-color: #252525; /* Line color change on hover */
+    background-color: #252525; 
 }
 
-/* Responsiveness */
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .header .sub-title {
+        font-size: 1.25rem; 
+    }
+}
+
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
+    }
+
+    .section-title {
+        font-size: 1.75rem; 
+    }
+
+    .header .sub-title {
+        font-size: 1rem; 
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    .service-item h3 {
+        font-size: 1rem; 
+    }
+
+    .service-item .icon {
+        font-size: 1.5rem; 
     }
 }
