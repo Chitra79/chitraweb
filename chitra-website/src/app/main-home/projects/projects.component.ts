@@ -1,21 +1,23 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss']
 })
+export class ProjectsComponent implements OnInit, AfterViewInit {
+  heroImage = 'assets/f-bg.png';
+  
 
+  ngOnInit(): void {}
 
-export class ProjectsComponent {
-  constructor(private router: Router) {}
-
-
-
-
-
-  go(){
-    this.router.navigate(['/page']);
+  ngAfterViewInit(): void {
+    gsap.from('.hero .content', {
+      duration: 1,
+      opacity: 0,
+      y: -50,
+      ease: 'power3.out',
+    });
   }
 }

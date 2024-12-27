@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import anime from 'animejs';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -13,6 +14,13 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.animateElements();
+  }
+  cvUrl: string;
+
+
+  constructor(private sanitizer: DomSanitizer) {
+
+    this.cvUrl = 'assets/Cv.pdf'; 
   }
 
   animateElements() {

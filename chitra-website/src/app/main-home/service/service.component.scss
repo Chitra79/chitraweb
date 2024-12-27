@@ -1,0 +1,106 @@
+.services-section {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.header {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #F1C40F;
+}
+
+.header .sub-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.service-item {
+    background-color: #34495e;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For z-index control */
+}
+
+.service-item:hover {
+    background-color: #fbbf24; /* Highlight color on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Smoother, more prominent shadow */
+    z-index: 1; /* Bring the hovered item to the front */
+}
+
+.service-item .icon {
+    font-size: 30px;
+    color: #fbbf24; /* Ensure the icon contrasts with the background */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .icon {
+    color: #252525; /* Icon color change on hover */
+}
+
+.service-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #BDC3C7;
+    margin: 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.service-item h3::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 10px auto 0;
+    transition: background-color 0.3s ease;
+}
+
+.service-item:hover h3 {
+    color: #252525; /* Text color change on hover */
+}
+
+.service-item:hover h3::after {
+    background-color: #252525; /* Line color change on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

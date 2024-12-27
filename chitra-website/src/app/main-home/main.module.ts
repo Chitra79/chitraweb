@@ -18,6 +18,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ServiceComponent } from './service/service.component';
+
+
 
 
 @NgModule({
@@ -34,6 +37,7 @@ import { CommonModule } from '@angular/common';
     ExperienceComponent,
     SkillsComponent,
     TestimonialComponent,
+    ServiceComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +45,8 @@ import { CommonModule } from '@angular/common';
     MainRoutingModule,
     MatGridListModule,
     FontAwesomeModule, 
+   
+
   ]
 })
 export class MainModule { }

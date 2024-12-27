@@ -1,71 +1,31 @@
-<section id="experience" class="page-section">
-    <section class="experience-section">
-        <h2 class="section-title">My Experiences</h2>
-        <p class="section-description">
-            One of the most beautiful parts of every person's life is their work life. I am very happy to have spent this part of my life with the people I loved, and it has significantly enhanced my passion for my work.
-        </p>
-        
-        <div class="experience-cards">
-            <!-- Frontend Developer Experience -->
-            <div class="card">
-                <img src="assets/aadimFavicon.png" alt="" class="company-logo">
-                <div class="card-content">
-                    <h3>Frontend Developer - <span class="employment-type">(Full-Time)</span></h3>
-                    <span class="employment-period"><i class="fas fa-briefcase"></i> 2023 - Present</span>
-                    <ul>
-                        <li>Developed responsive user interfaces using Angular for multiple projects</li>
-                        <li>Worked closely with backend teams to integrate APIs and enhance performance</li>
-                        <li>Improved cross-browser compatibility and mobile-first UI strategies</li>
-                        <li>Led code reviews and ensured adherence to best practices in frontend development</li>
-                    </ul>
-                </div>
-            </div>
+<section id="experience" class="experience-section">
+  <div class="experience-header">
+    <h2 class="section-title">My Experiences</h2>
+    <p class="section-description">
+      Work life is one of the most beautiful parts of everyone's life. I'm grateful to have spent mine with inspiring people, fueling my passion for what I do.
+    </p>
+  </div>
 
-            <!-- UI/UX Figma Design Experience -->
-            <div class="card">
-                <img src="assets/figma.png" alt="" class="company-logo">
-                <div class="card-content">
-                    <h3>UI/UX Designer -  <span class="employment-type">(Part-Time)</span></h3>
-                    <span class="employment-period"><i class="fas fa-briefcase"></i> 2023 - Present</span>
-                    <ul>
-                        <li>Designed intuitive and user-centered web and mobile interfaces using Figma</li>
-                        <li>Conducted user research and created wireframes, mockups, and prototypes</li>
-                        <li>Collaborated with developers to ensure seamless design handoff and implementation</li>
-                        <li>Enhanced UX through user testing and feedback-driven iterations</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="experience-content">
+    <!-- Image Section -->
+    <div class="image-container">
+     
+    </div>
 
-            <!-- Angular & Backend Experience -->
-            <div class="card">
-                <img src="assets/angular.png" alt="Angular Logo" class="company-logo">
-                <div class="card-content">
-                    <h3>Angular Developer - <span class="employment-type">(Full-Time)</span></h3>
-                    <span class="employment-period"><i class="fas fa-briefcase"></i> 2023 - Present</span>
-                    <ul>
-                        <li>Expert in Angular development, with a focus on dynamic, component-driven applications</li>
-                        <li>Implemented CRUD operations with Spring Boot backend services</li>
-                        <li>Integrated complex APIs and optimized performance for enterprise-level apps</li>
-                        <li>Developed reusable services, modules, and components for scalable applications</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Video Editing with CapCut Experience -->
-            <div class="card">
-                <img src="assets/video.jpg" alt="CapCut Logo" class="company-logo">
-                <div class="card-content">
-                    <h3>Video Editor -  <span class="employment-type">(Part-Time)</span></h3>
-                    <span class="employment-period"><i class="fas fa-briefcase"></i> 2023 - Present</span>
-                    <ul>
-                        <li>Edited engaging video content using CapCut for social media and YouTube platforms</li>
-                        <li>Applied transitions, effects, and soundtracks to enhance visual storytelling</li>
-                        <li>Collaborated with content creators to ensure alignment with brand vision</li>
-                        <li>Managed post-production tasks including color grading and audio adjustments</li>
-                    </ul>
-                </div>
-            </div>
-            
+    <!-- Experience Cards -->
+    <div class="experience-cards">
+      <div class="card" *ngFor="let experience of experiences">
+        <div class="card-content">
+          <h3>{{ experience.title }} - <span>{{ experience.type }}</span></h3>
+          <span class="employment-period">
+            <i class="fas fa-calendar-alt"></i> {{ experience.period }}
+          </span>
+          <ul>
+            <li *ngFor="let task of experience.tasks">{{ task }}</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  
+  </div>
 </section>

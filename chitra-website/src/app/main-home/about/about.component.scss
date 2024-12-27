@@ -1,140 +1,140 @@
-
 .about-section {
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    background-color: #2C3E50;
-}
-.about-container {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-}
-.about-image {
-    flex: 1;
-    position: relative;
-}
-.image-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    overflow: hidden;
-    border-radius: 15px;
- 
-}
-.image-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  padding: 4rem 2rem;
+  background-color: #2c3e50;
+  color: #f1c40f;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .about-content {
-    flex: 2;
+  flex: 1 1 50%;
+  padding: 1rem;
 }
-h1 {
-    font-size: 2.5rem;
-    color: #F1C40F;
-    margin-bottom: 1rem;
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #f1c40f;
+  line-height: 1.2;
 }
-p {
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #bdc3c7;
+}
+
+
+.about-image {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    flex: 1 1 100%;
+    padding: 2rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-description {
     font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: #BDC3C7;
-}
-.achievements {
-    display: flex;
-    gap: 1.5rem;
+  }
+
+  .achievements {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .achievement-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
     margin-top: 2rem;
-}
-.achievement-card {
-    flex: 1;
-    background-color: #2c3e50;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 0.5s ease-out;
+  }
+
+  .image-wrapper {
+    max-width: 500px;
+  }
 }
 
-.achievement-card h2 {
-    font-size: 2.5rem;
-    color: #F1C40F;
-    margin: 0;
-}
-.achievement-card p {
-    font-size: 1rem;
-    color: #BDC3C7;
-    margin-top: 0.5rem;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@media (min-width: 768px) {
-    .about-container {
-        flex-direction: row;
-    }
-    .about-image {
-        flex: 1;
-    }
-    .about-content {
-        flex: 2;
-        padding-right: 2rem;
-    }
-}
-/* Modal style */
-.modal {
-    display: flex; /* Use flexbox to center the modal */
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%; /* Adjust width for mobile */
-    max-width: 800px;
-    max-height: 90%; /* Adjust height for mobile */
-    overflow-y: auto; /* Scroll if content exceeds height */
-    box-sizing: border-box; /* Ensure padding is included in the width/height */
-}
-
-iframe {
-    width: 100%;
-    height: 80vh; /* Adjust height to fit mobile screens */
-    border: none;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95%; /* Increase width on smaller screens */
-        padding: 10px; /* Reduce padding for mobile */
-    }
+  .about-title {
+    font-size: 1.8rem;
+  }
 
-    .close {
-        font-size: 24px; /* Adjust close button size */
-    }
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .achievement-card h2 {
+    font-size: 2rem;
+  }
+
+  .achievement-card p {
+    font-size: 0.9rem;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+  }
+
+  .achievement-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .achievement-card p {
+    font-size: 0.8rem;
+  }
 }

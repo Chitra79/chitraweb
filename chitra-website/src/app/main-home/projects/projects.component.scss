@@ -1,167 +1,206 @@
-.projects {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #2C3E50;
+.hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 
-.projects h1 {
-    font-size: 2rem;  /* Responsive font size */
-    color: #F1C40F;
-    margin-bottom: 10px;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
 }
 
-.intro {
-    font-size: 1rem;  /* Responsive font size */
-    color: #BDC3C7;
-    margin-bottom: 50px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Project Container */
-.project-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Book Design (Updated width and height) */
-.book {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;  /* Make it responsive */
-    max-width: 350px;
-    background-color: whitesmoke;
-    box-shadow: 1px 1px 12px #000;
-    transform: preserve-3d;
-    perspective: 2000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.5s ease;
-    margin-bottom: 20px;
-}
-
-/* Project Content (Inside the book) */
 .content {
-    text-align: center;
-    padding: 20px;
-}
-.link-icon{
-    cursor: pointer;
-}
-
-.book h2 {
-    font-size: 1.5rem;  /* Responsive font size */
-    font-weight: bold;
-    margin-bottom: 15px;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-.content p {
-    font-size: 1rem;  /* Responsive font size */
-    margin-bottom: 20px;
-    color: #2C3E50;
+.category {
+  display: inline-block;
+  background: #2563eb;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
-.project-link {
-    padding: 10px 25px;
-    background-color: #f4c543;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    border: none;
-    cursor: pointer;
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-.project-link:hover {
-    background-color: #e1a531;
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.1rem;
 }
 
-/* Cover Image (Appears on Hover) */
-.cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: lightgray;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    box-shadow: 1px 1px 12px #000;
-    transition: transform 0.5s;
-    transform-origin: left;
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Hover Effect to Show Image */
-.book:hover .cover {
-    transform: rotateY(-80deg);
+/* Skills Section */
+.skills {
+  padding: 100px 0;
+  background: #34495e;
 }
 
-/* Project Image */
-.project-img {
-    width: 100px;  /* Responsive size */
-    height: 120px; /* Responsive size */
-    border-radius: 8px;
-    object-fit: cover;
+.skill-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image covers the area */
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Media Queries */
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #f5d23c;
+}
 
-/* Smaller Devices (Below 768px) */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #34495e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.skill-card h3 {
+  margin-bottom: 15px;
+  color: #f5d23c;
+}
+
+.skill-card p {
+  color: #BDC3C7;
+  line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+  padding: 100px 0;
+  background: #34495e;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #2C3E50;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+
+  
+
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+ /* Ensures the image covers the area */
+  object-position: top; /* Ensures the image aligns to the top */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+  color: #F1C40F;
+}
+
+.project-content p {
+  color: #BDC3C7;
+  margin-bottom: 15px;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  background: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .project-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
 
-    .book {
-        width: 90%;
-    }
+  .meta {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .projects h1 {
-        font-size: 1.75rem;
-    }
-
-    .intro {
-        font-size: 0.9rem;
-    }
-}
-
-/* Medium Devices (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .book {
-        width: 45%;
-    }
-
-    .projects h1 {
-        font-size: 2.5rem;
-    }
-
-    .intro {
-        font-size: 1.2rem;
-    }
-}
-
-/* Large Devices (Above 1024px) */
-@media (min-width: 1025px) {
-    .projects h1 {
-        font-size: 2.75rem;
-    }
-
-    .intro {
-        font-size: 1.25rem;
-    }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }

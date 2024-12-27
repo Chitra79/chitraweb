@@ -33,13 +33,12 @@
                           (click)="scrollToAnchoringPosition('skills')" href="javascript:void(0)">Skills</a>
                   </li>
                   <li class="nav-item ms-3">
-                      <a class="nav-link" [class.active]="activeSection === 'projects'"
-                          (click)="scrollToAnchoringPosition('projects')" href="javascript:void(0)">Projects</a>
+                      <a class="nav-link" [class.active]="activeSection === 'projects'" routerLink="/projects">Projects</a>
                   </li>
                   
                   <li class="nav-item ms-3">
                     <a class="nav-link" [class.active]="activeSection === 'hire'"
-                        (click)="scrollToAnchoringPosition('hire')" href="javascript:void(0)">Hire Me</a>
+                        (click)="scrollToAnchoringPosition('hire')" href="javascript:void(0)">Contact Us</a>
                 </li>
 
               </ul>
