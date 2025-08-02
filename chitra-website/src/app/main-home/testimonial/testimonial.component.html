@@ -1,0 +1,30 @@
+<section id="team">
+<div class="team-container">
+  <h2 class="team-title"># Team Brogrammers</h2>
+
+  <div class="team-members">
+    <div class="member-card" *ngFor="let member of team">
+      <img [src]="member.image" alt="{{member.name}}" class="profile-img" />
+      <div class="green-dot"></div>
+      <h3 class="member-name">{{member.name}}</h3>
+      <p class="member-role">{{member.role}}</p>
+
+      <div class="social-icons">
+        <a *ngIf="member.social.github" [href]="member.social.github" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a *ngIf="member.social.linkedin" [href]="member.social.linkedin" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a *ngIf="member.social.website" [href]="member.social.website" target="_blank">
+          <i class="fas fa-globe"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <p class="team-description">
+    A collaborative team of four developers working together on innovative projects, combining individual expertise to deliver exceptional solutions in both competitive and commercial environments.
+  </p>
+</div>
+</section>

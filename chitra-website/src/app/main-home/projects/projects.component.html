@@ -1,0 +1,58 @@
+<section id="projects">
+  <h4 class="section-title">Projects</h4>
+  <div class="projects-container">
+    <div class="sidebar">
+      <div class="project-list">
+        <div
+          *ngFor="let project of projects"
+          class="project-card"
+          [ngClass]="{ selected: (selectedProject$ | async)?.name === project.name }"
+          (click)="selectProject(project)"
+        >
+          <div class="project-name">{{ project.name }}</div>
+          <div class="project-description">{{ project.description }}</div>
+          <div
+            class="project-status"
+            [ngClass]="{
+              live: project.status === 'Live',
+              production: project.status === 'Production',
+              completed: project.status === 'Completed',
+              'in-development': project.status === 'In-Development'
+            }"
+          >
+            {{ project.status }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content" *ngIf="selectedProject$ | async as selectedProject">
+      <h1>
+        {{ selectedProject.name }}
+        <button
+          *ngIf="selectedProject.status === 'Live' && selectedProject.link"
+          class="live-button"
+          (click)="openProjectLink(selectedProject); $event.stopPropagation()"
+        >
+          Live View ↗️
+        </button>
+      </h1>
+      <div class="web-platform">Web Platform</div>
+
+      <h3 class="description">Description</h3>
+      <p class="description-text">{{ projectDetails[selectedProject.name].description }}</p>
+
+      <h3 class="features">Features</h3>
+      <ul>
+        <li *ngFor="let feature of projectDetails[selectedProject.name].keyFeatures">{{ feature }}</li>
+      </ul>
+
+      <h3 class="tech-stack">Tech Stack</h3>
+      <div class="tech-stack">
+        <div class="tech-button" *ngFor="let tech of projectDetails[selectedProject.name].techStack">
+          {{ tech }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

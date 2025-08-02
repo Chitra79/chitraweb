@@ -1,0 +1,99 @@
+.team-container {
+  background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3e 100%);
+  padding: 4rem 2rem;
+  color: #8b5cf6;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+
+}
+
+.team-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.member-card {
+
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  width: 250px;
+  position: relative;
+  transition: transform 0.3s;
+
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    .social-icons {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 1rem;
+  
+}
+
+.green-dot {
+  width: 12px;
+  height: 12px;
+  background: #00ff57;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  font-size: 0.8rem;
+  color: #a0a0c0;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.social-icons i:hover {
+  color: #fff;
+}
+
+.team-description {
+
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}

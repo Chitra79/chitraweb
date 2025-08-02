@@ -1,0 +1,53 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="carousel-container">
+      <button class="carousel-prev" [disabled]="currentIndex === 0"><</button>
+      <div class="carousel" #carousel>
+        <div class="carousel-slide" *ngFor="let experience of experiences; let i = index">
+          <div class="experience-card">
+            <div class="card-content">
+              <h3>{{ experience.title }}</h3>
+              <div class="meta">
+                <span class="company">{{ experience.company }}</span>
+                <span class="type">{{ experience.type }}</span>
+              </div>
+              <ul>
+                <li *ngFor="let task of experience.tasks">{{ task }}</li>
+              </ul>
+              <div class="expertise" *ngIf="experience.expertise">
+                <h4>Expertise:</h4>
+                <ul>
+                  <li *ngFor="let skill of experience.expertise">{{ skill }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-next" [disabled]="currentIndex === experiences.length - 1">></button>
+    </div>
+
+    <!-- Additional Experience -->
+    <div class="additional-experience">
+      <div class="additional-card" *ngFor="let additional of additionalExperiences">
+        <div class="card-header">
+          <h3>{{ additional.title }}</h3>
+          <div class="meta">
+            <span class="description">{{ additional.description }}</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="sidebar">
+            <span class="period">{{ additional.period }}</span>
+          </div>
+          <div class="main-content">
+            <ul>
+              <li *ngFor="let task of additional.tasks">{{ task }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
