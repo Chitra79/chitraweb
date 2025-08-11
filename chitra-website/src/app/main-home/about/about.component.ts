@@ -36,7 +36,7 @@ export class AboutComponent implements AfterViewInit {
       }
     );
 
-    // Description animation - only on scroll
+
     gsap.fromTo('.about-content p', 
       {
         opacity: 0,
