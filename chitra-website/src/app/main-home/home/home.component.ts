@@ -3,6 +3,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import anime from 'animejs';
 
+
 import Typed from 'typed.js';
 
 @Component({
